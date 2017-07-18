@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane id="AnchorPane" fx:id="Anchor" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseMoved="#mouseMoved" prefHeight="865.0" prefWidth="1500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.Controller">
+  <children>
+    <ImageView id="q02th.jpg" fx:id="FinishButton" depthTest="INHERIT" fitHeight="881.0" fitWidth="1500.0" layoutX="0.0" layoutY="-8.0" preserveRatio="false">
+      <image>
+        <Image url="@../q02th.jpg" />
+      </image>
+    </ImageView>
+    <StackPane fx:id="discardPile" layoutX="857.0" layoutY="333.0" prefHeight="100.0" prefWidth="100.0" visible="true" />
+    <Rectangle id="computer" arcHeight="10.0" arcWidth="10.0" fill="BLACK" height="175.0" layoutX="14.0" layoutY="0.0" opacity="0.19" stroke="BLACK" strokeType="INSIDE" width="1500.0" />
+    <HBox id="ComputerHbox" fx:id="ComputerHBox" layoutX="0.0" layoutY="13.0" prefHeight="174.0" prefWidth="1500.0" snapToPixel="false" spacing="5.0" />
+    <Button fx:id="startButton" layoutX="750.0" layoutY="412.0" mnemonicParsing="false" onAction="#handleStartButton" text="Start" />
+    <StackPane fx:id="drawPile" layoutX="581.0" layoutY="333.0" maxHeight="175.0" maxWidth="175.0" prefHeight="100.0" prefWidth="100.0" />
+    <Button fx:id="drawButton" layoutX="44.0" layoutY="579.0" mnemonicParsing="false" onMouseClicked="#drawClicked" text="Draw" />
+    <TextArea fx:id="txtField" editable="false" layoutX="397.0" layoutY="589.0" opacity="0.5" prefHeight="82.0" prefWidth="1103.0" wrapText="true" />
+    <Rectangle id="human" arcHeight="0.0" arcWidth="0.0" fill="BLACK" height="207.0" layoutX="-14.0" layoutY="671.0" onMouseEntered="#discard" opacity="0.13" stroke="BLACK" strokeType="INSIDE" width="2000.0" />
+    <HBox fx:id="humanHBox" layoutX="0.0" layoutY="675.0" mouseTransparent="false" prefHeight="200.0" prefWidth="2000.0" snapToPixel="false" spacing="5.0" />
+    <VBox layoutX="35.0" layoutY="439.0" prefHeight="114.0" prefWidth="66.0" spacing="10.0">
+      <children>
+        <Button id="RED" fx:id="red" mnemonicParsing="false" onAction="#redSelcted" prefWidth="66.0" text="RED" />
+        <Button fx:id="blue" mnemonicParsing="false" onAction="#blueSelected" prefWidth="65.99990000000253" text="BLUE" />
+        <Button fx:id="green" mnemonicParsing="false" onAction="#greenSelected" prefWidth="84.0" text="GREEN" />
+        <Button fx:id="yellow" mnemonicParsing="false" onAction="#yellowSelected" text="YELLOW" />
+      </children>
+    </VBox>
+    <TextField alignment="CENTER" layoutX="0.0" layoutY="412.0" opacity="0.58" prefHeight="21.0" prefWidth="152.0" text="Wild Card Color Setting" />
+  </children>
+</AnchorPane>
